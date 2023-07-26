@@ -1,8 +1,7 @@
-import 'package:ebbin/home.dart';
-
 import 'package:flutter/material.dart';
 
+import 'package:ebbin/pages/home.dart';
 void main(){
-  runApp(Home());
+  runApp(MyApp());
 }
 
