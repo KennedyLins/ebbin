@@ -71,6 +71,7 @@
 
 
 
+import 'package:ebbin/pages/subject.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ebbin/pages/add_subject.dart';
@@ -98,10 +99,21 @@ class DialogExample extends StatelessWidget {
         centerTitle: true,
         ),
       body: Center(
-        child: OutlinedButton(
-          onPressed: () => _dialogBuilder(context),
-          child: const Text('Open Dialog'),
-        ),
+        child: ListView(
+          padding: EdgeInsets.all(10.0),
+          children: [
+            ElevatedButton(
+              onPressed: () => _dialogBuilder(context),
+              child: const Text('Iniciar novo assunto'),
+            ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Subject()));
+              },
+              child: const Text('Trilha de revisao'),
+            ),
+          ],
+        ), 
       ),
     );
   }
