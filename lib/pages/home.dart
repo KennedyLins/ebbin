@@ -74,8 +74,6 @@
 import 'package:ebbin/pages/subject.dart';
 import 'package:flutter/material.dart';
 
-import 'package:ebbin/pages/add_subject.dart';
-
 
 class MyApp extends StatelessWidget {
 
@@ -103,7 +101,7 @@ class DialogExample extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           children: [
             ElevatedButton(
-              onPressed: () => _dialogBuilder(context),
+              onPressed: () => null ,
               child: const Text('Iniciar novo assunto'),
             ),
             ElevatedButton(
@@ -117,13 +115,5 @@ class DialogExample extends StatelessWidget {
       ),
     );
   }
-
-  Future<void> _dialogBuilder(BuildContext context) {
-    return showDialog<void>(
-      context: context,
-      builder: (BuildContext context) {
-        return AddSubject();
-      },
-    );
-  }
 }
+  

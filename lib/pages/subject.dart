@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ebbin/pages/add_subject.dart';
 
 class Subject extends StatefulWidget {
 
@@ -14,10 +15,17 @@ class _SubjectState extends State<Subject> {
       title: 'Ebbin',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Ebbin - Revisor de assuntos',),
+          title: Text('Lista de Assuntos',),
           backgroundColor:  Colors.lightGreen,
           centerTitle: true,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){ 
+             _dialogBuilder(context);
+          },
+          backgroundColor: Colors.lightGreen,
+          child: Icon(Icons.add),
+          ),
         body: Center(    
           child: Text('Lista de Assuntos'),  
         )
@@ -25,3 +33,14 @@ class _SubjectState extends State<Subject> {
     );  
   }
 }
+
+
+Future<void> _dialogBuilder(BuildContext context) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AddSubject();
+      },
+    );
+ }
+

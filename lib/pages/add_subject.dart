@@ -20,6 +20,12 @@ class AddSubject extends StatelessWidget {
           },
           child: Text('Cancelar')
         ),
+        TextButton(
+          onPressed: (){ 
+            null;
+          },
+          child: Text('Adicionar')
+        ),
       ],
     );
   }
